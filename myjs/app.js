@@ -1,8 +1,18 @@
 define(function(require,exports,model){
-		var und=require("underscore");
-		var backbone=require("backbone");
-		var UserModel=require("myjs/UserModel");
+	
+		var UserModel=require("myjs/model/UserModel");
+
+		var user=new UserModel({});
+		user.fetch({success:function(model,res){
+				 model.set(res);
+				 alert(user.get('name')+"\r\n"+user.get('age'));
+				 alert(user.get('cid'))
+		}});
+
 		
-		var user=new UserModel({id:'',name:"joy"});
-		alert(user.check(user));
+		
+		
+
+
+		
 })

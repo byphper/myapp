@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<meta charset='utf-8'>
+	<title>web note</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/seajs/sea-debug.js"></script>
+	<script type="text/javascript" src="js/Underscore.js"></script>
+	<script type="text/javascript" src="js/backbone.js"></script>
+
+	<body>
+		<script type="text/javascript" charset="utf-8">
+			$(function(){
+				var m=Backbone.Model.extend({constructor:function(){this.nimei='cacaca'},age:123});
+				var mb=new m();
+				console.dir(mb);
+
+				var n=Backbone.Model.extend({dage:123});
+				var nb=new n();
+				nb.set({jiejie:456});
+				console.dir(nb);
+				alert(nb.get('jiejie'))
+				
+			})
+
+		</script>
+		<div id="nm">
+		<input type="button" id="nima" value="showViewEvent" /></div>
+	</body>
+</html>
